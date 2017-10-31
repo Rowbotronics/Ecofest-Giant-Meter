@@ -1,5 +1,5 @@
-int output_min=30;
-int output_max=150;
+int output_min=40;
+int output_max=140;
 
 int input_min=500;
 int input_max= 825;
@@ -13,7 +13,6 @@ byte config_button_pin = 3;
 int buffer[smoothing];
 int bufpos = 0;
 int autoconf_seconds = 20;
-
 void setup() {
  pinMode(input_pin, INPUT);
  pinMode(output_pin, OUTPUT);
@@ -22,10 +21,12 @@ void setup() {
  Serial.begin(9600);
 }
 
+
 void loop() {
-//  while(1){
-//    SweepTest();
-//  }
+ //  analogWrite(output_pin, 90);
+  while(1){
+    SweepTest();
+  }
  // AutoConfigure();
   while(1) {
     RunMeter();
